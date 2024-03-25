@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  font-family: "montserrat";
+}
+a {
+  text-decoration: none;
+}
+#nav {
+  height: 140px;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  padding: 0 120px;
+  position: fixed;
+  z-index: 99;
+}
+
+#nav .logo img {
+  width: 95px;
+}
+#nav .navigation ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+#nav .navigation ul li {
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#cursor {
+  height: 20px;
+  width: 20px;
+  background-color: #3ab034;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9;
+}
+#cursor-blur {
+  height: 500px;
+  width: 500px;
+  background-color: #3ab0342a;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9;
+  filter: blur(30px);
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+}
+#main {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#page1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+#page1 h1 {
+  font-size: 110px;
+  font-weight: 900;
+  text-transform: uppercase;
+  z-index: 9;
+  position: relative;
+}
+#page1 h1::before {
+  content: "eat. drink. play";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  color: #000;
+  -webkit-text-stroke: 1px #3ab034;
+  z-index: -1;
+}
+#page1 h3 {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+#page1 p {
+  font-size: 17px;
+  font-weight: 500;
+  width: 40%;
+}
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+
+}
+#scroller {
+  /* display: inline-block; */
+  /* background-color: red; */
+  /* white-space: nowrap; */
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 10;
+}
+#scroller::-webkit-scrollbar {
+  display: none;
+}
+
+#scroll-in {
+  display: inline-block;
+  white-space: nowrap;
+  /* overflow-x: hidden;
+  overflow-y: hidden; */
+  animation-name: scroll;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#scroll-in h4 {
+  display: inline-block;
+  font-size: 120px;
+  font-weight: 900;
+  margin-right: 10px;
+  -webkit-text-stroke: 1px #3ab034;
+  text-transform: uppercase;
+  transition: all linear 0.5s;
+  color: transparent;
+}
+#scroll-in h4:hover {
+  color: #3ab034;
+}
+/*------ Animation -----*/
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+#about-us {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 50px;
+  position: relative;
+}
+#about-us img {
+  height: 200px;
+  width: 240px;
+  object-fit: cover;
+  /* width: 250px; */
+  border-radius: 20px;
+}
+#about-us-in {
+  width: 50%;
+  text-align: center;
+}
+#about-us-in h3 {
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+#about-us-in p {
+  font-size: 20px;
+  font-weight: 600;
+}
+/* Cards Section */
+
+.cards-container {
+  /* background-color: rgb(35, 35, 35); */
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+.cards {
+  background-color: rgb(6, 6, 27);
+  width: 20%;
+  height: 55%;
+  border-radius: 30px;
+  overflow: hidden;
+  z-index: 9;
+  transition: all 0.4s ease;
+  
+}
+#card1 {
+  background: url("https://sidcup-family-golf-rishabh07r.netlify.app/Assests/card1.avif")
+    no-repeat center / cover;
+  /* object-fit: cover; */
+}
+#card2 {
+  background: url("https://sidcup-family-golf-rishabh07r.netlify.app/Assests/card2.webp")
+    no-repeat center / cover;
+  /* object-fit: cover; */
+}
+#card3 {
+  background: url("https://sidcup-family-golf-rishabh07r.netlify.app/Assests/card3.avif")
+    no-repeat center / cover;
+  /* object-fit: cover; */
+}
+.overlay{
+  height: 100%;
+  width: 100%;
+  background: #3ab034;
+  overflow: hidden;
+  padding: 50px 20px 0;  
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+.overlay h3{
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #000;
+}
+.overlay p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2em;
+  color: #000;
+}
+.cards:hover .overlay{
+  opacity: 1;
+}
+.cards:hover{
+  transform: rotate3d(1, 1, 0, 20deg);
+}
