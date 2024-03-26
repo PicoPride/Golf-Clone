@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-:root{
+:root {
   --skin-color: #3ab034;
 }
 * {
@@ -267,11 +267,11 @@ video {
   overflow: hidden;
 }
 .green-container img {
-height: 100%;
-width: 15%;
-object-fit: cover;
+  height: 100%;
+  width: 15%;
+  object-fit: cover;
 }
-.green-container p{
+.green-container p {
   width: 50%;
   font-size: 33px;
   font-weight: 700;
@@ -281,7 +281,7 @@ object-fit: cover;
 }
 /* Page 3 Design */
 
-#page3{
+#page3 {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -289,22 +289,82 @@ object-fit: cover;
   align-items: center;
   position: relative;
 }
-#page3 img{
+#page3 img {
   max-width: 70px;
   position: absolute;
 }
-#page3>p{
+#page3 > p {
   width: 60%;
   text-align: center;
   font-size: 35px;
   font-weight: 500;
   line-height: 40px;
 }
-#page3 #colon1{
+#page3 #colon1 {
   top: 25%;
   left: 15%;
 }
-#page3 #colon2{
+#page3 #colon2 {
   bottom: 25%;
   right: 15%;
+}
+#page4 {
+  height: 50vh;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#page4 .text-box h3 {
+  font-size: 5.7em;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+}
+.green-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.green-box .box {
+  width: 30%;
+  height: 23vh;
+  background-color: #3ab034;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+.green-box .box h3 {
+  color: #000;
+  font-size: 33px;
+  text-transform: uppercase;
+  font-weight: 500;
+  scale: 1.1;
+}
+.green-box #box1:hover {
+  background: url("./assets/1.avif") no-repeat center/cover;
+}
+.green-box #box2:hover {
+  background: url("./assets/2.avif") no-repeat center/cover;
+}
+.green-box #box3:hover {
+  background: url("./assets/3.avif") no-repeat center/cover;
+}
+.green-box #box1:hover h3 {
+  color: #fff;
+  scale: 1;
+}
+.green-box #box2:hover h3 {
+  color: #fff;
+}
+.green-box #box3:hover h3 {
+  color: #fff;
 }
